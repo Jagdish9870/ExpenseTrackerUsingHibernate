@@ -4,6 +4,7 @@ import com.jack.Entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 public class UserDao {
     private SessionFactory sessionFactory;
@@ -38,6 +39,22 @@ public class UserDao {
 
         session.close();
         return value;
+
+    }
+    public User login(String email, String password){
+        User u=null;
+        session=sessionFactory.openSession();
+        Query q=session.createQuery("from User where email=:em and password=:ps");
+        q.setParameter("em",email);
+        q.setParameter("ps",password);
+         u=(User)q.uniqueResult();
+
+        return u;
+
+
+
+
+
 
     }
 }

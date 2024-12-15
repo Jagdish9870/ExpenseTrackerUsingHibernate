@@ -22,7 +22,7 @@
                         <h3>Join Us Today!</h3>
                         <p class="mb-0">Create an account to get started</p>
                         <c:if test="${not empty msg}">
-                        <p class="text-center text-success-fs-4">${msg}</p>
+                        <p class="text-center text-success fs-4">${msg}</p>
                         <c:remove var="msg"/></c:if>
 
 

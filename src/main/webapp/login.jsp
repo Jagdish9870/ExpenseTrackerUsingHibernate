@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,19 +19,22 @@
                     <div class="card-header bg-primary text-white text-center">
                         <h3>Welcome Back!</h3>
                         <p class="mb-0">Log in to your account</p>
+                        <c:if test="${not empty msg}">
+                                                <p class="text-center text-danger fs-4">${msg}</p>
+                                                <c:remove var="msg"/></c:if>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="login" method="post">
                             <!-- Email -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
                             </div>
 
                             <!-- Password -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
                             </div>
 
                             <!-- Remember Me Checkbox -->
