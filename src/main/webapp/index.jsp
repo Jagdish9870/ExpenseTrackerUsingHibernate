@@ -1,3 +1,5 @@
+<%@page import ="com.jack.conn.HibernateUtil"%>
+<%@page import ="org.hibernate.SessionFactory"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -9,6 +11,7 @@
 <body>
 
  <%@include file="component/navbar.jsp"%>
+
  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
    <div class="carousel-indicators">
      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
