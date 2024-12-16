@@ -4,14 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="component/All_css.jsp"%>
-
   </head>
 <body>
-
  <%@include file="component/navbar.jsp"%>
-
  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
    <div class="carousel-indicators">
      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -21,18 +18,17 @@
      <div class="carousel-item active" data-bs-interval="10000">
        <img src="img/img3.jpg" class="d-block w-100" alt="..." height="650px">
        <div class="carousel-caption d-none d-md-block">
-         <h5>First slide label</h5>
-         <p>Some representative placeholder content for the first slide.</p>
+         <h5>ExpenseMaster</h5>
+          <p>Your ultimate solution to managing personal and professional expenses effortlessly</p>
        </div>
      </div>
      <div class="carousel-item" data-bs-interval="2000">
        <img src="img/img2.jpeg" class="d-block w-100" alt="..." height="650px">
        <div class="carousel-caption d-none d-md-block">
-         <h5>Second slide label</h5>
-         <p>Some representative placeholder content for the second slide.</p>
+        <h5>Key Features</h5>
+        <p>Features like real-time updates, visual spending insights, record daily expenses, or analyzing spending.</p>
        </div>
      </div>
-
    </div>
    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
      <span class="carousel-control-prev-icon" aria-hidden="true"></span>

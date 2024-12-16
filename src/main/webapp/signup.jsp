@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="component/All_css.jsp"%>
 
   </head>
@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow-lg">
-                    <div class="card-header bg-primary text-white text-center">
+                    <div class="card-header bg-success text-white text-center">
                         <h3>Join Us Today!</h3>
                         <p class="mb-0">Create an account to get started</p>
                         <c:if test="${not empty msg}">
@@ -65,7 +65,7 @@
 
                                 <!-- Signup Button -->
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    <button type="submit" class="btn btn-success">Sign Up</button>
                                 </div>
                             </form>
                         </div>

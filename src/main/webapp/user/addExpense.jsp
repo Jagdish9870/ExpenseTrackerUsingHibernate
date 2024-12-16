@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="../component/All_css.jsp"%>
      <style>
             body {
@@ -43,8 +43,6 @@
    <c:if test="${empty loginUser}">
    <c:redirect url="../login.jsp"></c:redirect>
 </c:if>
-
-
 
     <div class="form-container card-sh">
         <h3 class="text-center mb-4 ">Add Expense</h3>

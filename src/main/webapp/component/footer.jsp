@@ -1,4 +1,4 @@
-<footer class="bg-light mt-5" "bg-success text-white text-white mt-5">
+<footer class="bg-success text-white  mt-1" "bg-success text-white mt-1">
         <div class="container py-3">
             <div class="row text-center">
                 <!-- Address -->

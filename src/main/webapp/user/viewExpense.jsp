@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="../component/All_css.jsp"%>
      <style>
             body {
@@ -34,6 +34,9 @@
             .btn-green:hover {
                 background-color: #218838;
             }
+            .card-sh{
+                        box-shadow: 0 0 6px 0 rgba(0,0,0,0.4)
+                        }
         </style>
   </head>
 <body>
@@ -42,7 +45,7 @@
    <c:if test="${empty loginUser}">
    <c:redirect url="../login.jsp"></c:redirect>
 </c:if>
-<div class="container">
+<div class="container card-sh">
     <!-- Title -->
     <div class="text-center mb-4">
         <h2>My Expenses</h2>

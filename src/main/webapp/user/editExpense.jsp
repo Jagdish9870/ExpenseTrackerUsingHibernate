@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="../component/All_css.jsp"%>
      <style>
             body {

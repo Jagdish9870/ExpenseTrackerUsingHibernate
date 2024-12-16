@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP Page Example</title>
+    <title>ExpenseMaster</title>
     <%@include file="component/All_css.jsp"%>
 
   </head>
@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow-lg">
-                    <div class="card-header bg-primary text-white text-center">
+                    <div class="card-header bg-success text-white text-center">
                         <h3>Welcome Back!</h3>
                         <p class="mb-0">Log in to your account</p>
                         <c:if test="${not empty msg}">
@@ -45,12 +45,12 @@
 
                             <!-- Login Button -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Log In</button>
+                                <button type="submit" class="btn btn-success">Log In</button>
                             </div>
                         </form>
                     </div>
                      <div class="card-footer text-center">
-                                            <p class="mb-1">Forgot your password? <a href="#">Reset it here</a></p>
+
                                             <p class="mb-0">Don't have an account? <a href="signup.jsp">Sign Up</a></p>
                                         </div>
                                     </div>
