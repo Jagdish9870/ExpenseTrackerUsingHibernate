@@ -19,11 +19,12 @@
           </c:if>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.jsp"><i class="fa-solid fa-house"></i> Home</a>
-            </li>
+
 
             <c:if test="${not empty loginUser}">
+            <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="../user/Home.jsp"><i class="fa-solid fa-house"></i> Home</a>
+             </li>
                         <li class="nav-item">
                          <a class="nav-link active" href="#" >
                          <i class="fa-solid fa-user"></i>  ${loginUser.name}</a>
@@ -38,7 +39,9 @@
 
             </c:if>
             <c:if test="${empty loginUser}">
-
+                            <li class="nav-item">
+                               <a class="nav-link active" aria-current="page" href="index.jsp"><i class="fa-solid fa-house"></i> Home</a>
+                             </li>
                                 <li class="nav-item">
                                   <a class="nav-link active" href="signup.jsp"><i class="fa-solid fa-user-plus"></i> SignUp</a>
                                 </li>

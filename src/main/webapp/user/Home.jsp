@@ -12,6 +12,9 @@
   </head>
 <body>
 <%@include file="../component/navbar.jsp"%>
+   <c:if test="${empty loginUser}">
+   <c:redirect url="../login.jsp"></c:redirect>
+</c:if>
 
  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
    <div class="carousel-indicators">

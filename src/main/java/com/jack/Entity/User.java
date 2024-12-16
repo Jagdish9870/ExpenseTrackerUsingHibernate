@@ -25,6 +25,9 @@ public class User {
 
     }
 
+    public User(String title, String date, String time, String description, String price, User user) {
+    }
+
     public int getId() {
         return id;
     }

@@ -2,6 +2,7 @@ package com.jack.conn;
 // if dont want to use xml file...... we can use this java file.....
 
 
+import com.jack.Entity.Expenses;
 import com.jack.Entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -23,6 +24,7 @@ public class HibernateUtil {
 
             // adding classes
             configuration.addAnnotatedClass(User.class);
+            configuration.addAnnotatedClass(Expenses.class);
 
             ServiceRegistry serviceRegistry=new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
             sessionfactory= (SessionFactory)configuration.buildSessionFactory(serviceRegistry);
