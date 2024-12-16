@@ -46,6 +46,9 @@
     <!-- Title -->
     <div class="text-center mb-4">
         <h2>My Expenses</h2>
+        <c:if test="${not empty msg}">
+                 <p class="text-center text-success fs-4">${msg}</p>
+                 <c:remove var="msg"/></c:if>
         <p class="text-muted">View and manage your recorded expenses</p>
     </div>
 
@@ -80,7 +83,7 @@
                     <td><%=ex.getDescription()%></td>
                    <td><%=ex.getPrice()%></td>
                     <td>
-                         <a href="#" class="btn btn-sm btn-warning me-2">
+                         <a href="editExpense.jsp?id=<%=ex.getId()%>" class="btn btn-sm btn-warning me-2">
                           <i class="fas fa-edit"></i> Edit
                          </a>
                          <a href="#" class="btn btn-sm btn-danger">

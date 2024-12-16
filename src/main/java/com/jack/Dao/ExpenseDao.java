@@ -60,4 +60,46 @@ public class ExpenseDao {
         }
         return list;
     }
+    public Expenses getExpenseById(int id){
+        Expenses ex= null;
+
+        try{
+            session=sessionFactory.openSession();
+            Query<Expenses> q= session.createQuery("from Expenses where id=:id");
+            q.setParameter("id",id);
+            ex=q.uniqueResult();
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ex;
+    }
+    public boolean UpdateExpense(Expenses expense){
+        boolean value=false;
+
+
+
+        try {
+            session=sessionFactory.openSession();
+            tx= session.beginTransaction();
+            session.saveOrUpdate(expense);
+            tx.commit();
+            value=true;
+        } catch (Exception e) {
+            if(tx !=null){
+                value=false;
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+
+        session.close();
+        return value;
+
+    }
 }
