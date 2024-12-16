@@ -86,7 +86,7 @@
                          <a href="editExpense.jsp?id=<%=ex.getId()%>" class="btn btn-sm btn-warning me-2">
                           <i class="fas fa-edit"></i> Edit
                          </a>
-                         <a href="#" class="btn btn-sm btn-danger">
+                         <a href="../deleteExpense?id=<%=ex.getId()%>" class="btn btn-sm btn-danger">
                          <i class="fas fa-trash-alt"></i> Delete
                          </a>
                     </td>

@@ -2,6 +2,7 @@ package com.jack.Dao;
 
 import com.jack.Entity.Expenses;
 import com.jack.Entity.User;
+import com.jack.Servlet.SaveExpenseServlet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -97,6 +98,26 @@ public class ExpenseDao {
 
 
 
+
+        session.close();
+        return value;
+
+    }
+    public boolean deleteExpense(int id){
+        boolean value=false;
+         try {
+            session=sessionFactory.openSession();
+            tx= session.beginTransaction();
+            Expenses ex=session.get(Expenses.class,id);
+            session.delete(ex);
+            tx.commit();
+            value=true;
+        } catch (Exception e) {
+            if(tx !=null){
+                value=false;
+                e.printStackTrace();
+            }
+        }
 
         session.close();
         return value;
